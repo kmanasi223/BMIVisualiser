@@ -10,12 +10,15 @@
 		09D456DB24B849630047210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DA24B849630047210A /* AppDelegate.swift */; };
 		09D456DD24B849630047210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DC24B849630047210A /* SceneDelegate.swift */; };
 		09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DE24B849630047210A /* BMIVisualiser.xcdatamodeld */; };
-		09D456E224B849630047210A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456E124B849630047210A /* ContentView.swift */; };
+		09D456E224B849630047210A /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456E124B849630047210A /* ProfileListView.swift */; };
 		09D456E424B849630047210A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D456E324B849630047210A /* Assets.xcassets */; };
 		09D456E724B849630047210A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D456E624B849630047210A /* Preview Assets.xcassets */; };
 		09D456EA24B849630047210A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D456E824B849630047210A /* LaunchScreen.storyboard */; };
 		09D456F524B849630047210A /* BMIVisualiserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456F424B849630047210A /* BMIVisualiserTests.swift */; };
 		09D4570024B849630047210A /* BMIVisualiserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456FF24B849630047210A /* BMIVisualiserUITests.swift */; };
+		09D4570E24B858170047210A /* ProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D4570D24B858170047210A /* ProfileRowView.swift */; };
+		09D4571124B85DCD0047210A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D4571024B85DCD0047210A /* ProfileHeaderView.swift */; };
+		09D4571324B86EAD0047210A /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D4571224B86EAD0047210A /* CreateProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		09D456DA24B849630047210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D456DC24B849630047210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09D456DF24B849630047210A /* BMIVisualiser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BMIVisualiser.xcdatamodel; sourceTree = "<group>"; };
-		09D456E124B849630047210A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		09D456E124B849630047210A /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		09D456E324B849630047210A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09D456E624B849630047210A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09D456E924B849630047210A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		09D456FB24B849630047210A /* BMIVisualiserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMIVisualiserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D456FF24B849630047210A /* BMIVisualiserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIVisualiserUITests.swift; sourceTree = "<group>"; };
 		09D4570124B849630047210A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D4570D24B858170047210A /* ProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRowView.swift; sourceTree = "<group>"; };
+		09D4571024B85DCD0047210A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		09D4571224B86EAD0047210A /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,9 @@
 		09D456D924B849630047210A /* BMIVisualiser */ = {
 			isa = PBXGroup;
 			children = (
+				09D4570F24B85CDE0047210A /* View */,
 				09D456DA24B849630047210A /* AppDelegate.swift */,
 				09D456DC24B849630047210A /* SceneDelegate.swift */,
-				09D456E124B849630047210A /* ContentView.swift */,
 				09D456E324B849630047210A /* Assets.xcassets */,
 				09D456E824B849630047210A /* LaunchScreen.storyboard */,
 				09D456EB24B849630047210A /* Info.plist */,
@@ -137,6 +143,17 @@
 				09D4570124B849630047210A /* Info.plist */,
 			);
 			path = BMIVisualiserUITests;
+			sourceTree = "<group>";
+		};
+		09D4570F24B85CDE0047210A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09D456E124B849630047210A /* ProfileListView.swift */,
+				09D4570D24B858170047210A /* ProfileRowView.swift */,
+				09D4571024B85DCD0047210A /* ProfileHeaderView.swift */,
+				09D4571224B86EAD0047210A /* CreateProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D4571324B86EAD0047210A /* CreateProfileView.swift in Sources */,
+				09D4570E24B858170047210A /* ProfileRowView.swift in Sources */,
+				09D4571124B85DCD0047210A /* ProfileHeaderView.swift in Sources */,
 				09D456DB24B849630047210A /* AppDelegate.swift in Sources */,
 				09D456DD24B849630047210A /* SceneDelegate.swift in Sources */,
-				09D456E224B849630047210A /* ContentView.swift in Sources */,
+				09D456E224B849630047210A /* ProfileListView.swift in Sources */,
 				09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
