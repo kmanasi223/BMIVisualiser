@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091B8E0524BC9000000CB2D2 /* BMIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B8E0424BC9000000CB2D2 /* BMIProfile.swift */; };
 		09D456DB24B849630047210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DA24B849630047210A /* AppDelegate.swift */; };
 		09D456DD24B849630047210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DC24B849630047210A /* SceneDelegate.swift */; };
 		09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DE24B849630047210A /* BMIVisualiser.xcdatamodeld */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		091B8E0424BC9000000CB2D2 /* BMIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIProfile.swift; sourceTree = "<group>"; };
 		09D456D724B849630047210A /* BMIVisualiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMIVisualiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D456DA24B849630047210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D456DC24B849630047210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091B8E0324BC8FC9000CB2D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				091B8E0424BC9000000CB2D2 /* BMIProfile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		09D456CE24B849620047210A = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		09D456D924B849630047210A /* BMIVisualiser */ = {
 			isa = PBXGroup;
 			children = (
+				091B8E0324BC8FC9000CB2D2 /* Model */,
 				09D4570F24B85CDE0047210A /* View */,
 				09D456DA24B849630047210A /* AppDelegate.swift */,
 				09D456DC24B849630047210A /* SceneDelegate.swift */,
@@ -291,6 +302,7 @@
 				09D4570E24B858170047210A /* ProfileRowView.swift in Sources */,
 				09D4571124B85DCD0047210A /* ProfileHeaderView.swift in Sources */,
 				09D456DB24B849630047210A /* AppDelegate.swift in Sources */,
+				091B8E0524BC9000000CB2D2 /* BMIProfile.swift in Sources */,
 				09D456DD24B849630047210A /* SceneDelegate.swift in Sources */,
 				09D456E224B849630047210A /* ProfileListView.swift in Sources */,
 				09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */,
