@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct ProfileListView: View {
+    var profileList : [BMIProfile]
+    
     var body: some View {
         VStack {
             ProfileHeaderView(title: "BMIVisualiser")
             
-            List (0 ..< 5) { item in
+            List (0 ..< profileList.count) { item in
                 ProfileRowView()
             }
         }
@@ -22,7 +24,7 @@ struct ProfileListView: View {
 
 struct ProfileListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileListView()
+        ProfileListView(profileList: [BMIProfile(name: "TestName", dob: Date())])
     }
 }
 
