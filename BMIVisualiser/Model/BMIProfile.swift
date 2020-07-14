@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct BMIProfile {
+struct BMIProfile: Identifiable {
+    var id: Int
+    
     var name : String?
     var dob : Date?
 }

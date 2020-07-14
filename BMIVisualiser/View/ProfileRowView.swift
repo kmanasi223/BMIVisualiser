@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct ProfileRowView: View {
+    var profile : BMIProfile
+    
     var body: some View {
         HStack {
-            Text("Name")
+            Text(profile.name ?? "")
             Spacer()
             Button(action: {
                 print("add new info for new date")
@@ -40,6 +42,6 @@ struct ProfileRowView: View {
 
 struct ProfileRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileRowView()
+        ProfileRowView(profile: BMIProfile(id: 0, name: "TestName", dob: Date()))
     }
 }

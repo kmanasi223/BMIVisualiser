@@ -14,8 +14,8 @@ struct ProfileListView: View {
     var body: some View {
         VStack {
             ProfileHeaderView(title: "BMIVisualiser")
-            List (0 ..< profileList.count) { item in
-                ProfileRowView()
+            List (profileList, id: \.id) { item in
+                ProfileRowView(profile: item)
             }
         }
     }
@@ -23,7 +23,7 @@ struct ProfileListView: View {
 
 struct ProfileListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileListView(profileList: [BMIProfile(name: "TestName", dob: Date())])
+        ProfileListView(profileList: [BMIProfile(id: 0, name: "TestName", dob: Date())])
     }
 }
 
