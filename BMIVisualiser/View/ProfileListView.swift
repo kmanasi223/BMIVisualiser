@@ -14,7 +14,6 @@ struct ProfileListView: View {
     var body: some View {
         VStack {
             ProfileHeaderView(title: "BMIVisualiser")
-            
             List (0 ..< profileList.count) { item in
                 ProfileRowView()
             }

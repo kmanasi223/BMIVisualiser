@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CreateProfileView: View {
-    @Binding var displayCreateProfileView: Bool
+    @Binding var isPresented: Bool
     
     @State var profileName: String = ""
     
@@ -38,14 +38,14 @@ struct CreateProfileView: View {
             HStack(alignment: .center) {
                 Button(action : {
                     print("create a profile")
-                    self.displayCreateProfileView = false
+                    self.isPresented = false
                 }) {
                     Text("Create")
                 }
                 Spacer()
                 Button(action : {
                     print("cancel")
-                    self.displayCreateProfileView = false
+                    self.isPresented = false
                 }) {
                     Text("Cancel")
                 }
@@ -59,6 +59,6 @@ struct CreateProfileView: View {
 
 struct CreateProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateProfileView(displayCreateProfileView: .constant(true))
+        CreateProfileView(isPresented: .constant(true))
     }
 }

@@ -27,6 +27,9 @@ struct ProfileHeaderView: View {
                         .font(.title)
                         .foregroundColor(.black)
                 }
+                .sheet(isPresented: $displayCreateProfileView) {
+                    CreateProfileView(isPresented: self.$displayCreateProfileView)
+                }
             }
         }
         .padding()
