@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		091B8E0524BC9000000CB2D2 /* BMIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B8E0424BC9000000CB2D2 /* BMIProfile.swift */; };
+		0956928124BEE6B50069A055 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956928024BEE6B50069A055 /* CoreDataManager.swift */; };
 		09D456DB24B849630047210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DA24B849630047210A /* AppDelegate.swift */; };
 		09D456DD24B849630047210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DC24B849630047210A /* SceneDelegate.swift */; };
 		09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DE24B849630047210A /* BMIVisualiser.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		091B8E0424BC9000000CB2D2 /* BMIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIProfile.swift; sourceTree = "<group>"; };
+		0956928024BEE6B50069A055 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		09D456D724B849630047210A /* BMIVisualiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMIVisualiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D456DA24B849630047210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D456DC24B849630047210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				09D4570F24B85CDE0047210A /* View */,
 				09D456DA24B849630047210A /* AppDelegate.swift */,
 				09D456DC24B849630047210A /* SceneDelegate.swift */,
+				0956928024BEE6B50069A055 /* CoreDataManager.swift */,
 				09D456E324B849630047210A /* Assets.xcassets */,
 				09D456E824B849630047210A /* LaunchScreen.storyboard */,
 				09D456EB24B849630047210A /* Info.plist */,
@@ -304,6 +307,7 @@
 				09D456DB24B849630047210A /* AppDelegate.swift in Sources */,
 				091B8E0524BC9000000CB2D2 /* BMIProfile.swift in Sources */,
 				09D456DD24B849630047210A /* SceneDelegate.swift in Sources */,
+				0956928124BEE6B50069A055 /* CoreDataManager.swift in Sources */,
 				09D456E224B849630047210A /* ProfileListView.swift in Sources */,
 				09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */,
 			);

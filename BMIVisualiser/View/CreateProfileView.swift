@@ -37,7 +37,11 @@ struct CreateProfileView: View {
             
             HStack(alignment: .center) {
                 Button(action : {
-                    print("create a profile")
+                    let profile = CoreDataManager.insertIntoEntity("BMIProfile") as? BMIProfile
+                    profile?.name = self.profileName
+                    profile?.dob = self.birthDate
+                    let appdelegate = UIApplication.shared.delegate as? AppDelegate
+                    appdelegate?.saveContext()
                     self.isPresented = false
                 }) {
                     Text("Create")

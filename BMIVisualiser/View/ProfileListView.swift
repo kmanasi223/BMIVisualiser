@@ -9,12 +9,17 @@
 import SwiftUI
 
 struct ProfileListView: View {
-    var profileList : [BMIProfile]
+    @FetchRequest(
+      entity: BMIProfile.entity(),
+      sortDescriptors: [
+        NSSortDescriptor(keyPath: \BMIProfile.name, ascending: true)
+      ]
+    ) var profileList: FetchedResults<BMIProfile>
     
     var body: some View {
         VStack {
             ProfileHeaderView(title: "BMIVisualiser")
-            List (profileList, id: \.id) { item in
+            List (profileList, id: \.self) { item in
                 ProfileRowView(profile: item)
             }
         }
@@ -23,8 +28,7 @@ struct ProfileListView: View {
 
 struct ProfileListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileListView(profileList: [BMIProfile(id: 0, name: "TestName", dob: Date())])
+        ProfileListView()
     }
 }
-
 

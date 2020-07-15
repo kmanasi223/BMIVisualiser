@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import CoreData
 
-struct BMIProfile: Identifiable {
-    var id: Int
-    
-    var name : String?
-    var dob : Date?
+@objc(BMIProfile)
+class BMIProfile: NSManagedObject {
+    @NSManaged var name : String?
+    @NSManaged var dob : Date?
 }

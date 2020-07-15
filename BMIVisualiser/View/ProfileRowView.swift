@@ -42,6 +42,7 @@ struct ProfileRowView: View {
 
 struct ProfileRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileRowView(profile: BMIProfile(id: 0, name: "TestName", dob: Date()))
+        let profiles = CoreDataManager.fetchEntity("BMIProfile") as! [BMIProfile]
+        return ProfileRowView(profile: profiles.first!)
     }
 }
