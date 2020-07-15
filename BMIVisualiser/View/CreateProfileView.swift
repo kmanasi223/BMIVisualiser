@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct CreateProfileView: View {
+    var isModifyViewMode : Bool = false
+    var profile : BMIProfile? = nil
     @Binding var isPresented: Bool
     
     @State var profileName: String = ""
@@ -19,32 +21,25 @@ struct CreateProfileView: View {
         return formatter
     }
 
-    @State private var birthDate = Date()
+    @State var birthDate = Date()
     
     var body: some View {
         VStack {
-            ProfileHeaderView(title: "Create a Profile",displayIcon: false)
-            HStack {
-                Text("Name :")
-                TextField("Enter name", text: $profileName)
+            ProfileHeaderView(title: isModifyViewMode ? "Modify a Profile" : "Create a Profile",displayIcon: false)
+            Form {
+                HStack {
+                    Text("Name :")
+                    TextField("Enter name", text: $profileName)
+                }
+                
+                DatePicker("Date of Birth :", selection: $birthDate, in: ...Date(), displayedComponents: .date)
             }
-            .padding()
-            
-            DatePicker(selection: $birthDate, in: ...Date(), displayedComponents: .date) {
-                Text("DOB :")
-            }
-            .padding()
-            
             HStack(alignment: .center) {
                 Button(action : {
-                    let profile = CoreDataManager.insertIntoEntity("BMIProfile") as? BMIProfile
-                    profile?.name = self.profileName
-                    profile?.dob = self.birthDate
-                    let appdelegate = UIApplication.shared.delegate as? AppDelegate
-                    appdelegate?.saveContext()
+                    self.isModifyViewMode ? self.modifyProfile() : self.createProfile()
                     self.isPresented = false
                 }) {
-                    Text("Create")
+                    Text(isModifyViewMode ? "Modify" : "Create")
                 }
                 Spacer()
                 Button(action : {
@@ -55,9 +50,22 @@ struct CreateProfileView: View {
                 }
             }
             .padding()
-            
-            Spacer()
         }
+    }
+    
+    func createProfile() {
+        let profile = CoreDataManager.insertIntoEntity("BMIProfile") as? BMIProfile
+        profile?.name = self.profileName
+        profile?.dob = self.birthDate
+        let appdelegate = UIApplication.shared.delegate as? AppDelegate
+        appdelegate?.saveContext()
+    }
+    
+    func modifyProfile() {
+        profile?.name = self.profileName
+        profile?.dob = self.birthDate
+        let appdelegate = UIApplication.shared.delegate as? AppDelegate
+        appdelegate?.saveContext()
     }
 }
 

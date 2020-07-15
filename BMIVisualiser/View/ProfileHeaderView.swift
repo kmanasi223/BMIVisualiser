@@ -21,7 +21,6 @@ struct ProfileHeaderView: View {
             if displayIcon {
                 Button(action : {
                     self.displayCreateProfileView = true
-                    print("add new profile")
                 }) {
                     Image(systemName: "person.crop.circle.badge.plus")
                         .font(.title)
