@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		091B8E0524BC9000000CB2D2 /* BMIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091B8E0424BC9000000CB2D2 /* BMIProfile.swift */; };
 		0956928124BEE6B50069A055 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956928024BEE6B50069A055 /* CoreDataManager.swift */; };
+		0987428B24C81D880073029B /* ProfileDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987428A24C81D880073029B /* ProfileDetailsView.swift */; };
 		09D456DB24B849630047210A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DA24B849630047210A /* AppDelegate.swift */; };
 		09D456DD24B849630047210A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DC24B849630047210A /* SceneDelegate.swift */; };
 		09D456E024B849630047210A /* BMIVisualiser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09D456DE24B849630047210A /* BMIVisualiser.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		091B8E0424BC9000000CB2D2 /* BMIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIProfile.swift; sourceTree = "<group>"; };
 		0956928024BEE6B50069A055 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0987428A24C81D880073029B /* ProfileDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsView.swift; sourceTree = "<group>"; };
 		09D456D724B849630047210A /* BMIVisualiser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMIVisualiser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D456DA24B849630047210A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D456DC24B849630047210A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				09D4570D24B858170047210A /* ProfileRowView.swift */,
 				09D4571024B85DCD0047210A /* ProfileHeaderView.swift */,
 				09D4571224B86EAD0047210A /* CreateProfileView.swift */,
+				0987428A24C81D880073029B /* ProfileDetailsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D4571324B86EAD0047210A /* CreateProfileView.swift in Sources */,
+				0987428B24C81D880073029B /* ProfileDetailsView.swift in Sources */,
 				09D4570E24B858170047210A /* ProfileRowView.swift in Sources */,
 				09D4571124B85DCD0047210A /* ProfileHeaderView.swift in Sources */,
 				09D456DB24B849630047210A /* AppDelegate.swift in Sources */,

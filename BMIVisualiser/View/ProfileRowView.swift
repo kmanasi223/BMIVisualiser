@@ -11,19 +11,23 @@ import SwiftUI
 struct ProfileRowView: View {
     var profile : BMIProfile
     @State var displayCreateProfileView : Bool = false
+    @State var displayProfileDetailsView : Bool = false
     
     var body: some View {
         HStack {
             Text(profile.name ?? "")
             Spacer()
             Button(action: {
-                print("add new info for new date")
+                self.displayProfileDetailsView = true
                 return
             }) {
                 Image(systemName: "calendar.badge.plus")
             }
             .buttonStyle(BorderlessButtonStyle())
             .foregroundColor(.black)
+            .sheet(isPresented: $displayProfileDetailsView) {
+                ProfileDetailsView(isPresented: self.$displayProfileDetailsView)
+            }
             
             Button(action: {
                 self.displayCreateProfileView = true

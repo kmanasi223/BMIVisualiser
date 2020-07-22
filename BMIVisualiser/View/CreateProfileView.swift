@@ -11,16 +11,10 @@ import SwiftUI
 struct CreateProfileView: View {
     var isModifyViewMode : Bool = false
     var profile : BMIProfile? = nil
+    
     @Binding var isPresented: Bool
     
     @State var profileName: String = ""
-    
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }
-
     @State var birthDate = Date()
     
     var body: some View {
@@ -33,23 +27,26 @@ struct CreateProfileView: View {
                 }
                 
                 DatePicker("Date of Birth :", selection: $birthDate, in: ...Date(), displayedComponents: .date)
-            }
-            HStack(alignment: .center) {
-                Button(action : {
-                    self.isModifyViewMode ? self.modifyProfile() : self.createProfile()
-                    self.isPresented = false
-                }) {
-                    Text(isModifyViewMode ? "Modify" : "Create")
-                }
+                
                 Spacer()
-                Button(action : {
-                    print("cancel")
-                    self.isPresented = false
-                }) {
-                    Text("Cancel")
+                
+                HStack(alignment: .center) {
+                    Button(action : {
+                        self.isModifyViewMode ? self.modifyProfile() : self.createProfile()
+                        self.isPresented = false
+                    }) {
+                        Text(isModifyViewMode ? "Modify" : "Create")
+                    }
+                    Spacer()
+                    Button(action : {
+                        print("cancel")
+                        self.isPresented = false
+                    }) {
+                        Text("Cancel")
+                    }
                 }
+                .padding()
             }
-            .padding()
         }
     }
     
