@@ -36,14 +36,15 @@ struct CreateProfileView: View {
                         self.isPresented = false
                     }) {
                         Text(isModifyViewMode ? "Modify" : "Create")
-                    }
+                    }.buttonStyle(BorderlessButtonStyle())
+                    
                     Spacer()
+                    
                     Button(action : {
-                        print("cancel")
                         self.isPresented = false
                     }) {
                         Text("Cancel")
-                    }
+                    }.buttonStyle(BorderlessButtonStyle())
                 }
                 .padding()
             }

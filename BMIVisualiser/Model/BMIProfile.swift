@@ -13,4 +13,6 @@ import CoreData
 class BMIProfile: NSManagedObject {
     @NSManaged var name : String?
     @NSManaged var dob : Date?
+    
+    @NSManaged var details : Set<BMDetails>?
 }

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="BMDetails" representedClassName="BMDetails" syncable="YES">
+        <attribute name="bmi" optional="YES" attributeType="String"/>
+        <attribute name="dateOfEvaluation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="height" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="String"/>
+        <relationship name="reverseProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BMIProfile" inverseName="details" inverseEntity="BMIProfile"/>
+    </entity>
     <entity name="BMIProfile" representedClassName="BMIProfile" syncable="YES">
         <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="details" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BMDetails" inverseName="reverseProfile" inverseEntity="BMDetails"/>
     </entity>
     <elements>
-        <element name="BMIProfile" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="BMDetails" positionX="-63" positionY="0" width="128" height="118"/>
+        <element name="BMIProfile" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

@@ -12,6 +12,7 @@ struct ProfileRowView: View {
     var profile : BMIProfile
     @State var displayCreateProfileView : Bool = false
     @State var displayProfileDetailsView : Bool = false
+    @State var displayGraphView : Bool = false
     
     var body: some View {
         HStack {
@@ -19,19 +20,17 @@ struct ProfileRowView: View {
             Spacer()
             Button(action: {
                 self.displayProfileDetailsView = true
-                return
             }) {
                 Image(systemName: "calendar.badge.plus")
             }
             .buttonStyle(BorderlessButtonStyle())
             .foregroundColor(.black)
             .sheet(isPresented: $displayProfileDetailsView) {
-                ProfileDetailsView(isPresented: self.$displayProfileDetailsView)
+                ProfileDetailsView(profile: self.profile, isPresented: self.$displayProfileDetailsView)
             }
             
             Button(action: {
                 self.displayCreateProfileView = true
-                return
             }) {
                 Image(systemName: "pencil")
             }
@@ -46,17 +45,18 @@ struct ProfileRowView: View {
             }
             
             Button(action: {
-                print("view graph")
-                return
+                self.displayGraphView = true
             }) {
                 Image(systemName: "chart.bar")
             }
             .buttonStyle(BorderlessButtonStyle())
             .foregroundColor(.black)
+            .sheet(isPresented: $displayGraphView) {
+                BMIGraph(details: self.profile.details, isPresented: self.$displayGraphView)
+            }
             
             Button(action: {
                 self.deleteProfile()
-                return
             }) {
                 Image(systemName: "trash.circle")
             }
